@@ -133,7 +133,7 @@ span.psw {
 
 <div id="id01" class="modal">
   
-  <form class="modal-content animate" action="/" method="post">
+  <form class="modal-content animate" action="/" method="post" id="form">
     <div class="imgcontainer">
       <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
       <img src="img_avatar2.png" alt="Avatar" class="avatar">
@@ -169,6 +169,29 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+</script>
+
+<script>
+$(document).ready(()=>
+{
+  $('#form').submit((e)=>
+  {
+    e.preventDefault();
+    $.ajax({
+
+      url:'/',
+      type: 'post',
+      contentType: 'application/json',
+      data : JSON.stringify($('#form').serializeArray()),
+      success:(response)=>
+      {
+        console.log('Successfully got responce');
+        console.log(response);
+      }
+    });
+
+  });
+});
 </script>
 
 </body>
