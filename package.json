@@ -1,0 +1,22 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "Tutorial",
+  "main": "11th.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paragk05/Nodejs.git"
+  },
+  "author": "Parag Khandalkar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/paragk05/Nodejs/issues"
+  },
+  "homepage": "https://github.com/paragk05/Nodejs#readme",
+  "dependencies": {
+    "lodash": "^4.17.15"
+  }
+}
